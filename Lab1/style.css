@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 30%; /* Adjusted to be narrower */
+    margin: 50px auto;
+    padding: 30px; /* Increased padding for better spacing */
+    background-color: blue;
+    color: white;
+    border: 15px solid red; /* Thickened the red border */
+    text-align: left;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.2em; /* Increased to match example */
+    font-weight: bold;
+    margin-bottom: 20px; /* Added spacing below */
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.section {
+    margin-bottom: 20px; /* Increased space between sections */
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 10px; /* More spacing */
+}
+
+ul {
+    padding-left: 20px;
+    margin-left: 20px;
+}
+
+ul li {
+    margin-bottom: 5px;
+    font-size: 1.1em; /* Slightly larger text */
+}

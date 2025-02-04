@@ -7,20 +7,20 @@ body {
 }
 
 .container {
-    width: 30%; /* Adjusted to be narrower */
+    width: 30%;
     margin: 50px auto;
-    padding: 30px; /* Increased padding for better spacing */
+    padding: 30px;
     background-color: blue;
     color: white;
-    border: 15px solid red; /* Thickened the red border */
+    border: 15px solid red;
     text-align: left;
 }
 
 h1 {
     text-align: center;
-    font-size: 2.2em; /* Increased to match example */
+    font-size: 2.2em;
     font-weight: bold;
-    margin-bottom: 20px; /* Added spacing below */
+    margin-bottom: 20px;
 }
 
 h2 {
@@ -29,14 +29,20 @@ h2 {
     margin-bottom: 10px;
 }
 
-.section {
-    margin-bottom: 20px; /* Increased space between sections */
+.introduction, .education {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
 }
 
-p {
-    font-size: 1.1em;
-    line-height: 1.6;
-    margin-bottom: 10px; /* More spacing */
+.introduction {
+    background-color: orange; /* First colored box */
+    color: navy;
+}
+
+.education {
+    background-color: green; /* Second colored box */
+    color: white;
 }
 
 ul {
@@ -46,5 +52,24 @@ ul {
 
 ul li {
     margin-bottom: 5px;
-    font-size: 1.1em; /* Slightly larger text */
+    font-size: 1.1em;
+}
+
+p, li {
+    color: yellow;
+}
+
+h1 {
+    text-align: center;
+}
+
+
+.links a {
+    color: white;
+    text-decoration: none; /* Removes underline */
+    font-weight: bold;
+}
+
+.links a:hover {
+    color: lightgray;
 }

@@ -7,7 +7,11 @@ function minMaxAverage(numbers) {
     let min = Math.min(...numbers);
     let max = Math.max(...numbers);
     let avg = (numbers.reduce((sum, num) => sum + num, 0) / total).toFixed(2);
-    console.log(`Total Numbers: ${total}, Min Value: ${min}, Max Value: ${max}, Average: ${avg}`);
+    console.log(`Total Numbers: ${total}`);
+    console.log(`Min Value: ${min}`);
+    console.log(`Max Value: ${max}`);
+    console.log(`Average: ${avg}`);
+    console.log("-----------------------------------");
 }
 
 // Test Cases for Exercise 1
@@ -19,7 +23,9 @@ console.log("Test Case 3:"); minMaxAverage([4, 2, 7, 9, 1, 11, 15]);
 function countVowels(str) {
     let vowels = str.match(/[aeiou]/gi);
     let count = vowels ? vowels.length : 0;
-    console.log(`${str}: ${count} vowels`);
+    console.log(`Word: ${str}`);
+    console.log(`Vowel Count: ${count}`);
+    console.log("-----------------------------------");
 }
 
 // Test Cases for Exercise 2
@@ -30,7 +36,9 @@ console.log("Test Case 3:"); countVowels("Skyline");
 // Exercise 3: Sorting Numbers
 function sortNumbers(numbers) {
     let sorted = [...numbers].sort((a, b) => a - b);
-    console.log(`Original Array: [${numbers}] -> Sorted Array: [${sorted}]`);
+    console.log(`Original Array: [${numbers}]`);
+    console.log(`Sorted Array: [${sorted}]`);
+    console.log("-----------------------------------");
 }
 
 // Test Cases for Exercise 3
@@ -43,6 +51,7 @@ function celsiusToFahrenheit(celsius) {
     let temp = parseFloat(celsius);
     let fahrenheit = ((temp * 9/5) + 32).toFixed(1);
     console.log(`${temp.toFixed(1)} Celsius = ${fahrenheit} Fahrenheit`);
+    console.log("-----------------------------------");
 }
 
 // Test Cases for Exercise 4
@@ -55,8 +64,9 @@ console.log("Test Case 5 (Graduate Requirement):"); celsiusToFahrenheit("-10");
 // Exercise 5: Sorting People by Age
 function sortPeople(people) {
     let sortedPeople = people.sort((a, b) => a.age - b.age);
-    let introductions = sortedPeople.map(person => `${person.name} is ${person.age} and from ${person.city}`);
-    console.log(introductions);
+    console.log("Sorted People:");
+    sortedPeople.forEach(person => console.log(`${person.name} is ${person.age} and from ${person.city}`));
+    console.log("-----------------------------------");
 }
 
 // Test Cases for Exercise 5

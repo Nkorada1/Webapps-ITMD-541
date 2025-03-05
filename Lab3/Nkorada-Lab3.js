@@ -70,7 +70,7 @@ function celsiusToFahrenheit(celsius) {
 // Test Cases for Exercise 4
 console.log("Test Case 1: "); celsiusToFahrenheit(30);
 console.log("Test Case 2: "); celsiusToFahrenheit(-5);
-console.log("Test Case 3: "); celsiusToFahrenheit(100);
+console.log("Test Case 3: "); celsiusToFahrenheit(45);
 console.log("Test Case 4 (Graduate Requirement): "); celsiusToFahrenheit("35");
 console.log("Test Case 5 (Graduate Requirement): "); celsiusToFahrenheit("-10");
 

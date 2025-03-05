@@ -98,7 +98,7 @@ console.log("Test Case 2:");
 sortPeople([
     { name: 'Lakshmi', age: 40, city: 'Hyderabad' },
     { name: 'Moksha', age: 35, city: 'Visakhapatnam' },
-    { name: 'Selfie', age: 45, city: 'MVP' },
+    { name: 'Selfie', age: 22, city: 'MVP' },
     { name: 'Nandhini', age: 32, city: 'NAD' },
     { name: 'Vijju', age: 38, city: 'Bheemili' }
 ]);

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tip Calculator</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Main Card Container -->
+  <div class="tip-card">
+    <h1>Narendra Korada - Lab5</h1>
+    <h1>Tip Calculator</h1>
+
+    <!-- Input Form Starts -->
+    <form id="tipForm">
+
+      <!-- Section: Bill Input -->
+      <div class="form-group">
+        <label for="billTotal">Bill Amount ($)</label>
+        <input type="text" id="billTotal" placeholder="Ex: 89.99" />
+      </div>
+
+      <!-- Section: Tip Slider -->
+      <div class="form-group">
+        <label for="tipRange">Select Tip %</label>
+        <input type="range" id="tipRange" min="0" max="100" value="10" />
+        <span id="tipPercentLabel">10%</span>
+      </div>
+
+      <!-- Section: Output Fields in Row -->
+      <div class="row">
+        <div class="col">
+          <label for="tipAmount">Tip Amount</label>
+          <input type="text" id="tipAmount" disabled /> 
+        </div>
+        <div class="col">
+          <label for="totalWithTip">Total + Tip</label>
+          <input type="text" id="totalWithTip" disabled />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <label for="totalWithTax">Total + Tax (11%)</label>
+          <input type="text" id="totalWithTax" disabled />
+        </div>
+        <div class="col">
+          <label for="convertedAmount">Converted</label>
+          <input type="text" id="convertedAmount" disabled />
+        </div>
+      </div>
+
+      <!-- Section: Currency Dropdown -->
+      <div class="form-group">
+        <label for="currencySelect">Convert Total With Tip:</label>
+        <select id="currencySelect">
+          <option value="">-- Choose Currency --</option>
+          <option value="INR">INR 🇮🇳</option>
+          <option value="EUR">EUR 🇪🇺</option>
+        </select>
+      </div>
+
+      <!-- Section: Error Message -->
+      <p class="error" id="error"></p>
+
+    </form>
+  </div>
+
+  <!-- External JS -->
+  <script src="script.js"></script>
+</body>
+</html>

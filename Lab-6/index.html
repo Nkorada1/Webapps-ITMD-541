@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sunrise & Sunset Dashboard</title>
+
+  <!-- Mapbox CSS -->
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🌅 Sunrise & Sunset Dashboard</h1>
+    <p>Get accurate solar data with location + modern map</p>
+  </header>
+
+  <section class="controls">
+    <label for="location-select" class="visually-hidden">Select a location</label>
+    <select id="location-select">
+      <option disabled selected>Select a Location</option>
+      <option value="40.7128,-74.0060">New York</option>
+      <option value="34.0522,-118.2437">Los Angeles</option>
+      <option value="51.5074,-0.1278">London</option>
+      <option value="35.6895,139.6917">Tokyo</option>
+      <option value="48.8566,2.3522">Paris</option>
+      <option value="-33.8688,151.2093">Sydney</option>
+      <option value="52.5200,13.4050">Berlin</option>
+      <option value="19.0760,72.8777">Mumbai</option>
+    </select>
+    <button id="geo-btn">📍 Use My Location</button>
+  </section>
+
+  <div id="map"></div>
+
+  <section class="results">
+    <div id="error-msg"></div>
+    <div id="dashboard"></div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 | ITMD 541 – Lab 6</p>
+    <p>Data via <a href="https://sunrisesunset.io/api/" target="_blank" rel="noopener">sunrisesunset.io API</a></p>
+  </footer>
+
+  <!-- Mapbox JS -->
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+
+  <!-- Your Script -->
+  <script src="script.js"></script>
+</body>
+</html>

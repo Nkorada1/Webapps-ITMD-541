@@ -57,7 +57,7 @@
     border-color: #42a5f5;
   }
   
-  /* Accessibility hidden label */
+  /* Visually hidden accessibility label */
   .visually-hidden {
     position: absolute;
     width: 1px;
@@ -68,7 +68,7 @@
     border: 0;
   }
   
-  /* Map container */
+  /* Mapbox map container */
   #map {
     height: 420px;
     width: 100%;
@@ -78,10 +78,16 @@
     border-radius: 12px;
   }
   
-  /* Results & dashboard */
+  /* Results and Dashboard Layout */
   .results {
     padding: 1.5rem;
     text-align: center;
+  }
+  
+  #error-msg {
+    color: crimson;
+    font-weight: bold;
+    margin-bottom: 1rem;
   }
   
   #dashboard {
@@ -92,13 +98,15 @@
     margin-top: 1rem;
   }
   
-  #error-msg {
-    color: crimson;
-    font-weight: bold;
-    margin-bottom: 1rem;
+  /* Time banner styling */
+  #dashboard p:first-child {
+    width: 100%;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #0d47a1;
   }
   
-  /* Data cards */
+  /* Data cards for today & tomorrow */
   .data-card {
     background: linear-gradient(135deg, #f6f9fc, #e3f2fd);
     padding: 1rem;
@@ -131,7 +139,7 @@
     to { opacity: 1; transform: translateY(0); }
   }
   
-  /* Loading spinner overlay */
+  /* Loading spinner */
   #spinner {
     position: fixed;
     top: 0;

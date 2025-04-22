@@ -84,11 +84,20 @@ async function fetchSunriseSunset(lat, lng) {
 
 function renderDashboard(data) {
   dashboard.innerHTML = "";
-  const currentTime = new Date().toLocaleString();
+
+  const now = new Date();
+  const timezone = data.today.timezone;
+  const localTime = new Intl.DateTimeFormat("en-US", {
+    timeZone: timezone,
+    dateStyle: "medium",
+    timeStyle: "medium"
+  }).format(now);
+
   const timeBanner = document.createElement("p");
   timeBanner.style.fontWeight = "bold";
   timeBanner.style.marginBottom = "1rem";
-  timeBanner.textContent = `⏰ Current Time: ${currentTime}`;
+  timeBanner.style.fontSize = "1.1rem";
+  timeBanner.textContent = `⏰ Local Time in ${timezone}: ${localTime}`;
   dashboard.appendChild(timeBanner);
 
   ["today", "tomorrow"].forEach(day => {

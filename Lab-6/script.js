@@ -84,6 +84,13 @@ async function fetchSunriseSunset(lat, lng) {
 
 function renderDashboard(data) {
   dashboard.innerHTML = "";
+  const currentTime = new Date().toLocaleString();
+  const timeBanner = document.createElement("p");
+  timeBanner.style.fontWeight = "bold";
+  timeBanner.style.marginBottom = "1rem";
+  timeBanner.textContent = `⏰ Current Time: ${currentTime}`;
+  dashboard.appendChild(timeBanner);
+
   ["today", "tomorrow"].forEach(day => {
     const d = data[day];
     const card = document.createElement("div");

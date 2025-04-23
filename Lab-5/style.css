@@ -90,10 +90,11 @@ input[type="range"]::-webkit-slider-thumb {
   flex-wrap: wrap;
   margin-bottom: 25px;
   box-sizing: border-box;
+  gap: 16px;
 }
 
 .col {
-  width: calc(50% - 10px);
+  width: calc(50% - 8px);
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -110,9 +111,7 @@ input[type="range"]::-webkit-slider-thumb {
 @media (max-width: 600px) {
   .row {
     flex-direction: column;
-    gap: 10px;
   }
-
   .col {
     width: 100%;
   }

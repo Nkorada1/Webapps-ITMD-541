@@ -11,38 +11,47 @@ const error = document.getElementById("error");
 
 // Update calculator whenever inputs change
 function updateCalculator() {
-  const bill = parseFloat(billTotal.value);
+  const billInput = billTotal.value.trim();
+  const bill = parseFloat(billInput);
   const tip = parseInt(tipRange.value);
-
   tipLabel.textContent = `${tip}%`; // Update tip display
 
-  if (billTotal.value === "") {
+  // Validate numeric and clean input
+  if (billInput === "") {
+    error.textContent = "Bill amount cannot be empty.";
+    clearFields();
+    return;
+  }
+
+  if (!/^\d+(\.\d{1,2})?$/.test(billInput)) {
+    error.textContent = "Please enter a valid numeric bill amount.";
     clearFields();
     return;
   }
 
   if (isNaN(bill) || bill < 0) {
-    error.textContent = "Please enter a valid non-negative bill amount.";
+    error.textContent = "Bill amount must be a positive number.";
     clearFields();
     return;
   }
 
   error.textContent = ""; // Clear error
 
-  // Tip amount
-  const tipValue = bill * (tip / 100);
+  // Step 1: Add 11% tax to bill
+  const taxAmount = bill * 0.11;
+  const billWithTax = bill + taxAmount;
+  totalWithTax.value = billWithTax.toFixed(2);
+
+  // Step 2: Calculate tip on taxed amount
+  const tipValue = billWithTax * (tip / 100);
   tipAmount.value = tipValue.toFixed(2);
 
-  // Total with tip
-  const total = bill + tipValue;
-  totalWithTip.value = total.toFixed(2);
+  // Step 3: Total after tax + tip
+  const finalTotal = billWithTax + tipValue;
+  totalWithTip.value = finalTotal.toFixed(2);
 
-  // Total with tax (11%)
-  const tax = bill * 0.11;
-  totalWithTax.value = (bill + tax).toFixed(2);
-
-  // Currency conversion
-  convertCurrency(total);
+  // Step 4: Currency conversion (based on final total)
+  convertCurrency(finalTotal);
 }
 
 // Clear output fields
@@ -53,7 +62,7 @@ function clearFields() {
   convertedAmount.value = "";
 }
 
-// Convert the totalWithTip into selected currency
+// Convert totalWithTip into selected currency
 function convertCurrency(total) {
   const selected = currencySelect.value;
   let result = "";

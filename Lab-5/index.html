@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tip Calculator</title>
+  <title>Smart Tip Calculator</title>
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
   <!-- External CSS -->
@@ -12,8 +12,9 @@
 <body>
   <!-- Main Card Container -->
   <div class="tip-card">
-    <h1>Narendra Korada - Lab5</h1>
-    <h1>Tip Calculator</h1>
+    <h1> Narendra Korada - Lab5 </h1>
+    <h2>ITMD 541 - Web Programming</h2>
+    <h3>Tip Calculator</h3>
 
     <!-- Input Form Starts -->
     <form id="tipForm">
@@ -27,15 +28,15 @@
       <!-- Section: Tip Slider -->
       <div class="form-group">
         <label for="tipRange">Select Tip %</label>
-        <input type="range" id="tipRange" min="0" max="100" value="10" />
-        <span id="tipPercentLabel">10%</span>
+        <input type="range" id="tipRange" min="0" max="100" value="15" />
+        <span id="tipPercentLabel">15%</span>
       </div>
 
       <!-- Section: Output Fields in Row -->
       <div class="row">
         <div class="col">
           <label for="tipAmount">Tip Amount</label>
-          <input type="text" id="tipAmount" disabled /> 
+          <input type="text" id="tipAmount" disabled />
         </div>
         <div class="col">
           <label for="totalWithTip">Total + Tip</label>

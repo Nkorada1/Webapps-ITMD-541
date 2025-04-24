@@ -43,6 +43,10 @@ geoBtn.addEventListener("click", () => {
   navigator.geolocation.getCurrentPosition(
     (pos) => {
       const { latitude, longitude } = pos.coords;
+
+      // Reset dropdown to default
+      locationSelect.selectedIndex = 0;
+      
       updateMap(latitude, longitude);
       fetchSunriseSunset(latitude, longitude);
     },

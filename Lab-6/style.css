@@ -119,8 +119,7 @@ button:hover, select:hover {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  font-size: 1.4rem;
-  line-height: 1.2;
+  font-size: 1.25rem;
 }
 
 .data-card:hover {

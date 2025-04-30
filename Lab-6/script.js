@@ -1,4 +1,4 @@
-// Replace YOUR_MAPBOX_ACCESS_TOKEN with your actual token from https://account.mapbox.com
+// MAPBOX_ACCESS_TOKEN https://account.mapbox.com
 mapboxgl.accessToken = 'pk.eyJ1IjoibmtvcmFkYTEiLCJhIjoiY205cnVwOXBkMDc2NzJ0cHVmMWptODBvYiJ9.nqbM5Oe0Pg7CUTZzmdHwSQ';
 
 const locationSelect = document.getElementById("location-select");

@@ -70,7 +70,7 @@ button:hover, select:hover {
 
 /* Mapbox map container */
 #map {
-  height: 350px;
+  height: 380px;
   width: 100%;
   max-width: 1200px;
   margin: 1rem auto;
